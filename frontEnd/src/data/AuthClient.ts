@@ -26,9 +26,9 @@ export class AuthClient extends CandyClient {
     return super.post<T>(url, data);
   }
 
-  async patch<T>(url: string, body?: any): Promise<T> {
+  async put<T>(url: string, body?: any): Promise<T> {
     super.setHeader('X-Client-URL', window.location.href);
-    return super.patch<T>(url, body);
+    return super.put<T>(url, body);
   }
 
   async delete<T>(url: string): Promise<T> {
@@ -65,7 +65,7 @@ export class AuthClient extends CandyClient {
   }
 
   async patchPrioridad(id: string, updateUserDTO) {
-    return this.patch(`/prioridad/${id}`, updateUserDTO);
+    return this.put(`/prioridad/${id}`, updateUserDTO);
   }
   /*
     async getEmpleado(id: string) {
@@ -79,8 +79,4 @@ export class AuthClient extends CandyClient {
     async patchEmpleado(id: string, updateUserDTO) {
       return this.patch(`/actualizarEmpleado/${id}`, updateUserDTO);
     }*/
-
-
-
-
 }

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e07dea1-0744-4ead-9f5b-dd7f3158e1d8" name="Changes" comment="Prioridad CRUD">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyecto_2_paradigmas/CORS/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Prolog data/task.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Controller/ClimaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Controller/DependenciaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Controller/PlanificacionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Controller/PrioridadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Controller/TareaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/DTO/ActualizarPrioridadDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/DTO/DependenciaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/DTO/PlanificacionDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/DTO/PrioridadDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/DTO/TareaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Entity/Clima.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Entity/Dependencia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Entity/Planificacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Entity/Prioridad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Entity/Tarea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Enum/Estado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Enum/Prioridad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Enum/RestriccionClima.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Enum/TipoDependencia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Prolog/PrologEngine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Proyecto2ParadigmasApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Repository/ClimaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Repository/DependenciaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Repository/PlanificacionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Repository/PrioridadRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Repository/TareaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Service/ClimaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Service/DependenciaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Service/PlanificacionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Service/PrioridadService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/Service/TareaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/proyecto_2_paradigmas/ServletInitializer.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;Bavaria1222&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;author&quot;: &quot;Bavaria1222&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Bavaria1222/Proyecto-2-Paradigmas.git",
+    "accountId": "62554a60-1f4e-4247-84b0-1742f2c21956"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2onyO1U5oVciUkGCG7J9oXEQX2D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Proyecto2ParadigmasApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/CAR/Desktop/PROYECTO BD BCKEND/Proyecto_BD_GYM/Backend/Backend_Gym",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Proyecto 2 Paradigmas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Proyecto 2 Paradigmas" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Proyecto2ParadigmasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Proyecto_2_Paradigmas" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.proyecto_2_paradigmas.Proyecto2ParadigmasApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e07dea1-0744-4ead-9f5b-dd7f3158e1d8" name="Changes" comment="" />
+      <created>1731519598818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731519598818</updated>
+      <workItem from="1731519599759" duration="7424000" />
+      <workItem from="1731549071610" duration="1553000" />
+      <workItem from="1731554266978" duration="315000" />
+      <workItem from="1731650599197" duration="5584000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1731554381828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731554381828</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Prioridad CRUD">
+      <option name="closed" value="true" />
+      <created>1731652428233</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731652428233</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="Prioridad CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prioridad CRUD" />
+  </component>
+</project>
