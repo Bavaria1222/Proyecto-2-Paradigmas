@@ -98,4 +98,17 @@ public class TareaController {
         Tarea tareaActualizada = tareaService.cambiarEstadoTarea(tareaId, nuevoEstado);
         return ResponseEntity.ok(tareaActualizada);
     }
+    /**
+     * Endpoint para agregar dependencias a una tarea existente.
+     */
+    @PostMapping("/{id}/dependencias")
+    public ResponseEntity<Tarea> agregarDependencias(@PathVariable Long id, @RequestBody List<DependenciaDTO> dependenciaDTO) {
+        Optional<Tarea> tareaOpt = tareaService.obtenerPorId(id);
+        if (tareaOpt.isPresent()) {
+            Tarea tareaConDependencias = tareaService.agregarDependencias(tareaOpt.get(), dependenciaDTO);
+            return ResponseEntity.ok(tareaConDependencias);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
