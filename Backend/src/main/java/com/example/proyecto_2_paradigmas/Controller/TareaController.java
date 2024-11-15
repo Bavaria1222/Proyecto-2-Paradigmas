@@ -5,6 +5,7 @@ import com.example.proyecto_2_paradigmas.DTO.TareaDTO;
 import com.example.proyecto_2_paradigmas.DTO.PrioridadDTO;
 import com.example.proyecto_2_paradigmas.Entity.Prioridad;
 import com.example.proyecto_2_paradigmas.Entity.Tarea;
+import com.example.proyecto_2_paradigmas.Enum.Estado;
 import com.example.proyecto_2_paradigmas.Service.PrioridadService;
 import com.example.proyecto_2_paradigmas.Service.TareaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,19 +48,6 @@ public class TareaController {
 
 
 
-    /**
-     * Endpoint para agregar dependencias a una tarea existente.
-     */
-    @PostMapping("/{id}/dependencias")
-    public ResponseEntity<Tarea> agregarDependencias(@PathVariable Long id, @RequestBody List<DependenciaDTO> dependenciaDTO) {
-        Optional<Tarea> tareaOpt = tareaService.obtenerPorId(id);
-        if (tareaOpt.isPresent()) {
-            Tarea tareaConDependencias = tareaService.agregarDependencias(tareaOpt.get(), dependenciaDTO);
-            return ResponseEntity.ok(tareaConDependencias);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
 
     /**
      * Endpoint para obtener una tarea por ID.
@@ -100,6 +88,14 @@ public class TareaController {
         Tarea tarea = tareaOpt.get();
         tarea.setPrioridad(prioridadOpt.get());
         Tarea tareaActualizada = tareaService.guardarTarea(tarea);
+        return ResponseEntity.ok(tareaActualizada);
+    }
+
+    @PutMapping("/{tareaId}/cambiarEstado")
+    public ResponseEntity<Tarea> cambiarEstadoTarea(
+            @PathVariable Long tareaId,
+            @RequestBody Estado nuevoEstado) {
+        Tarea tareaActualizada = tareaService.cambiarEstadoTarea(tareaId, nuevoEstado);
         return ResponseEntity.ok(tareaActualizada);
     }
 }

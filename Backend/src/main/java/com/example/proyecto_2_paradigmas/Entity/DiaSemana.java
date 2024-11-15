@@ -1,8 +1,6 @@
 package com.example.proyecto_2_paradigmas.Entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,21 +8,23 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity
-@Table(name = "planificaciones")
-public class Planificacion {
+@Table(name = "dias_semana")
+public class DiaSemana {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime fecha; // fecha de la planificación
+    private String nombre; // Nombre del día (por ejemplo, "Lunes")
+    private LocalDateTime fecha; // Fecha específica del día
 
-    @OneToMany(mappedBy = "planificacion", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Tarea> tareas;
+    @OneToMany(mappedBy = "diaSemana", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference // Manejo de la serialización JSON
+    private List<Clima> climas = new ArrayList<>();
 }
