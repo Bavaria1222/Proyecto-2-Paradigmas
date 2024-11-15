@@ -6,6 +6,7 @@ import React, { useCallback, useState } from 'react';
 import { getActionText } from 'src/utils/actions-utils';
 import { routes } from 'src/router/routes';
 import GetPrioridad from 'src/domain/prioridad/GetPrioridad';
+import GetTareas from 'src/domain/tarea/GetTarea';
 import { useNavigate } from 'react-router-dom';
 import GetTarea from 'src/domain/tarea/GetTarea';
 
@@ -33,8 +34,6 @@ const TareaLista = () => {
         navigate(routes.tarea + "/" + selectedRow.id);
     };
 
-
-
     const actions = [
 
         new TActions(
@@ -44,13 +43,15 @@ const TareaLista = () => {
         ),
     ];
 
-    const loadEmpleados = useCallback(async () => {
-        const empleados = await GetPrioridad();
-        return Array.isArray(empleados) ? empleados : [];
+    const loadTareas = useCallback(async () => {
+        const tareas = await GetTareas();
+        console.log('Fetched Tareas:', tareas);
+        return Array.isArray(tareas) ? tareas : [];
     }, []);
 
     const handleSelectItem = (row: any) => {
         setSelectedRow(row);
+        console.log('Selected Row:', row);
     };
 
     return (
@@ -65,7 +66,7 @@ const TareaLista = () => {
             <CandyTableGeneric
                 headers={headers}
                 isActionsEnabled={true}
-                onLoadData={loadEmpleados}
+                onLoadData={loadTareas}
                 showFilter={true}
                 actions={actions}
                 onSelectItem={handleSelectItem}

@@ -3,7 +3,6 @@ import CandyPage from '../generic/page';
 import CandyTableGeneric from '../generic/table';
 import { TActions, ModalTypes } from 'src/models/action-types';
 import React, { useCallback, useState } from 'react';
-import { getActionText } from 'src/utils/actions-utils';
 import { routes } from 'src/router/routes';
 import GetClima from 'src/domain/clima/GetClima';
 import DeleteClima from 'src/domain/clima/DeleteClima';
