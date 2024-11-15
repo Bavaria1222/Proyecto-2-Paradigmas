@@ -56,82 +56,31 @@ export class AuthClient extends CandyClient {
   }
 
   //Empleados
-  async getEmpleados() {
-    return this.get(`/empleados`);
+  async getPrioridad() {
+    return this.get(`/prioridad`);
   }
 
-
-  async getEmpleado(id: string) {
-    return this.get(`/cedula/${id}`);
+  async postPrioridad(empleadoDto) {
+    return this.post(`/prioridad`, empleadoDto);
   }
 
-  async postEmpleados(empleadoDto) {
-    return this.post(`/agregarEmpleado`, empleadoDto);
+  async patchPrioridad(id: string, updateUserDTO) {
+    return this.patch(`/prioridad/${id}`, updateUserDTO);
   }
+  /*
+    async getEmpleado(id: string) {
+      return this.get(`/cedula/${id}`);
+    }
 
-  async patchStatusEmpleado(id: string, estado: string) {
-    return this.patch(`/actualizarEstadoEmpleado/${id}/${estado}`);
-  }
-
-  async patchEmpleado(id: string, updateUserDTO) {
-    return this.patch(`/actualizarEmpleado/${id}`, updateUserDTO);
-  }
-  //Membresias
-  async getMembresias() {
-    return this.get(`/membresias/todas`);
-  }
+    async patchStatusEmpleado(id: string, estado: string) {
+      return this.patch(`/actualizarEstadoEmpleado/${id}/${estado}`);
+    }
+  
+    async patchEmpleado(id: string, updateUserDTO) {
+      return this.patch(`/actualizarEmpleado/${id}`, updateUserDTO);
+    }*/
 
 
-  async getMembresia(id: string) {
-    return this.get(`/membresias/${id}`);
-  }
 
-  async postMembresias(membresiaDto) {
-    return this.post(`/membresias/crear`, membresiaDto);
-  }
-
-  async patchMembresia(id: string, updatemembresiaDto) {
-    return this.patch(`membresias/actualizar/${id}`, updatemembresiaDto);
-  }
-
-  //Gimnasio
-
-  async getGimnasios() {
-    return this.get(`/Gimnnasios/todos`);
-  }
-
-  //Maquinas
-  async getMaquinas() {
-    return this.get(`/ObtenerMaquinas`);
-  }
-
-  async getMaquina(id: string) {
-    return this.get(`/ObtenerMaquinas/${id}`);
-  }
-  async postMaquina(MaquinaDto) {
-    return this.post(`/CrearMaquina`, MaquinaDto);
-  }
-
-  // Cursos
-
-  // Obtener todos los cursos
-  async getCursos() {
-    return this.get(`/ObtenerCursos`);
-  }
-
-  // Crear un curso
-  async postCurso(cursoDto: any) {
-    return this.post(`/CrearCurso`, cursoDto);
-  }
-
-  // Obtener historial de cursos
-  async getHistorialCursos() {
-    return this.get(`/ObtenerhistorialCursos`);
-  }
-
-  // Crear un historial de curso
-  async postHistorialCurso(historialCursoDto: any) {
-    return this.post(`/CrearhistorialCurso`, historialCursoDto);
-  }
 
 }

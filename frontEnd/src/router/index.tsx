@@ -3,8 +3,8 @@ import type { RouteObject } from 'react-router';
 import { Navigate, Outlet } from 'react-router-dom';
 import { Layout } from 'src/layouts';
 
-import Empleado from 'src/pages/tarea/empleado';
-import EmpleadosLista from 'src/pages/tarea/empleados';
+import Prioridad from 'src/pages/prioridad/prioridad';
+import PrioridadLista from 'src/pages/prioridad/prioridads';
 import GimnasiosLista from 'src/pages/clima/gimnasios';
 // import { Layout as LayoutBase } from "src/layouts/base";
 import { routes } from './routes';
@@ -41,10 +41,9 @@ export const routesOutlets: RouteObject[] = [
     children: [
       { index: true, element: <HomePage /> },
       { path: 'page-example', element: <PageExample /> },
-      { path: 'empleados', element: <EmpleadosLista /> },
-      { path: 'empleado', element: <Empleado /> },
-      { path: 'empleado/:id', element: <Empleado /> },
-      { path: 'gimnasios', element: <GimnasiosLista /> },
+      { path: 'prioridads', element: <PrioridadLista /> },
+      { path: 'prioridad', element: <Prioridad /> },
+      { path: 'prioridad/:id', element: <Prioridad /> },
 
     ],
   },

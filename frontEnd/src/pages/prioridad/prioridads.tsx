@@ -5,10 +5,11 @@ import { TActions, ModalTypes } from 'src/models/action-types';
 import React, { useCallback, useState } from 'react';
 import { getActionText } from 'src/utils/actions-utils';
 import { routes } from 'src/router/routes';
-import GetEmpleados from 'src/domain/empleados/GetEmpleados';
+import GetPrioridad from 'src/domain/prioridad/GetPrioridad';
 import { useNavigate } from 'react-router-dom';
-import PatchStatusEmpleado from 'src/domain/empleados/PatchEstadoEmpleado';
-const EmpleadosLista = () => {
+
+
+const PrioridadLista = () => {
     const [selectedRow, setSelectedRow] = useState<any | null>(null);
     const navigate = useNavigate();
 
@@ -17,39 +18,19 @@ const EmpleadosLista = () => {
     ];
 
     const headers = [
-        new THeader('Nombre', 'nombre', 20),
-        new THeader('Apellido', 'apellido1', 20),
-        new THeader('Apellido 2', 'apellido2', 20),
-        new THeader('Cédula', 'cedula', 20),
-        new THeader('Tel. Habitación', 'telHabitacion', 20),
-        new THeader('Fecha de Contratación', 'fechaContratacion', 20),
-        new THeader('Correo', 'email', 30),
-        new THeader('Rol', 'rol', 20, 'Sin Rol'),
-        new THeader('Estado', 'estado', 20),
+        new THeader('Id', 'id', 20),
+        new THeader('Descripcion', 'descripcion', 20),
+
     ];
 
     const handleEdit = async () => {
-        navigate(routes.empleado + "/" + selectedRow.cedula);
+        navigate(routes.prioridad + "/" + selectedRow.id);
     };
 
-    const onProcess = async () => {
-        const id = selectedRow.cedula;
-        const estado = selectedRow.cedula;
 
-        try {
-            await PatchStatusEmpleado(id, estado);
-        } catch (error) {
-            console.log(error);
-            throw error;
-        }
-    };
 
     const actions = [
-        new TActions(
-            ModalTypes.YesNo,
-            ` ${getActionText(selectedRow?.status)} `, onProcess,
-            `¿Está segura que desea ${getActionText(selectedRow?.status).toLowerCase()} el registro?`,
-        ),
+
         new TActions(
             ModalTypes.None,
             "Editar",
@@ -58,7 +39,7 @@ const EmpleadosLista = () => {
     ];
 
     const loadEmpleados = useCallback(async () => {
-        const empleados = await GetEmpleados();
+        const empleados = await GetPrioridad();
         return Array.isArray(empleados) ? empleados : [];
     }, []);
 
@@ -68,12 +49,12 @@ const EmpleadosLista = () => {
 
     return (
         <CandyPage
-            title='Listado de Empleados'
-            description={'Módulo de gestión de empleados'}
+            title='Listado de Prioridades'
+            description={'Módulo de gestión de prioridades'}
             breadcrumbs={breadcrumbs}
             isExportable={false}
             redirectLabel="Agregar"
-            redirectTo={routes.empleado}
+            redirectTo={routes.prioridad}
         >
             <CandyTableGeneric
                 headers={headers}
@@ -87,4 +68,4 @@ const EmpleadosLista = () => {
     );
 };
 
-export default EmpleadosLista;
+export default PrioridadLista;

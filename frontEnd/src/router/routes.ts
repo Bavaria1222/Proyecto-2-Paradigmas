@@ -2,14 +2,9 @@ export const routes = {
   index: '/',
   dummy: '',
   pageExample: '/page-example',
-  login: '/login',
-  register: '/register',
-  empleados: '/empleados',
-  empleado: '/empleado',
-  gimnasios: '/gimnasios',
-  maquinas: '/maquinas',
-  maquina: '/maquina',
-  membresias: '/membresias',
-  membresia: '/membresia',
+
+  prioridads: '/prioridads',
+  prioridad: '/prioridad',
+
 
 };

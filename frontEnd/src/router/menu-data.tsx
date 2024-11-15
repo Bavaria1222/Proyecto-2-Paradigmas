@@ -41,7 +41,7 @@ export const useMenuItems = (): MenuItem[] => {
                 <ClipboardDocumentIcon />
               </Box>
             ),
-            route: routes.gimnasios,
+            route: routes.dummy,
           },
           {
             title: 'Clima',
@@ -65,7 +65,7 @@ export const useMenuItems = (): MenuItem[] => {
                 <BookOpenIcon />
               </Box>
             ),
-            route: routes.empleados,
+            route: routes.dummy,
           },
           {
             title: 'Prioridad',
@@ -77,7 +77,7 @@ export const useMenuItems = (): MenuItem[] => {
                 <FlagIcon />
               </Box>
             ),
-            route: routes.membresias,
+            route: routes.prioridads,
           },
           {
             title: 'Plan Optimizado',
@@ -89,7 +89,7 @@ export const useMenuItems = (): MenuItem[] => {
                 <CogIcon />
               </Box>
             ),
-            route: routes.membresias,
+            route: routes.dummy,
           },
         ],
       },

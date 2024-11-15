@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import GetEmpleados from 'src/domain/empleados/GetEmpleados';
-import GetGimnasios from 'src/domain/gimnasio/GetGimnasios';
+import GetPrioridad from 'src/domain/prioridad/GetPrioridad';
 import { ModalTypes, TActions } from 'src/models/action-types';
 import { THeader } from 'src/models/table';
 import { routes } from 'src/router/routes';
@@ -28,9 +27,7 @@ const GimnasiosLista = () => {
 
 
   const loadEmpleados = useCallback(async () => {
-    const gimnasios = await GetGimnasios();
-    console.log(gimnasios);
-    return Array.isArray(gimnasios) ? gimnasios : [];
+    return null;
   }, []);
 
   const handleSelectItem = (row: any) => {
