@@ -1,16 +1,15 @@
 package com.example.proyecto_2_paradigmas.Prolog;
 
-
 import org.jpl7.Query;
 import org.jpl7.Term;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class PrologEngine {
 
-    // Constructor para cargar el archivo de reglas Prolog
     public PrologEngine() {
-        String consultQuery = "consult('src/main/resources/prolog data/task.pl')";
+        String consultQuery = "consult('src/main/resources/Prolog data/task.pl')";
         Query q1 = new Query(consultQuery);
         if (q1.hasSolution()) {
             System.out.println("Archivo Prolog cargado correctamente.");
@@ -19,18 +18,27 @@ public class PrologEngine {
         }
     }
 
-    // Método para realizar consultas en Prolog
-    public Map<String, Term> realizarConsulta(String consulta) {
-        Query query = new Query(consulta);
-        return query.oneSolution();
-    }
-
-    // Método específico para obtener un plan de tareas optimizado
     public List<Map<String, Term>> obtenerPlanDeTareas(List<Map<String, Object>> tareas) {
-        // Convertir la lista de tareas a una estructura que Prolog pueda procesar.
-        // Aquí puedes adaptar según tu formato y el archivo Prolog.
-        String consulta = "plan_optimo(Tareas, Plan)";
+        StringBuilder tareasProlog = new StringBuilder("[");
+
+        for (Map<String, Object> tarea : tareas) {
+            tareasProlog.append(tarea.get("nombre")).append(",");
+        }
+        tareasProlog.setLength(tareasProlog.length() - 1);  // Remover la última coma
+        tareasProlog.append("]");
+
+        String consulta = "plan_optimo(" + tareasProlog + ", Plan)";
         Query query = new Query(consulta);
-        return List.of(query.allSolutions());
+
+        List<Map<String, Term>> resultados = new ArrayList<>();
+        while (query.hasMoreSolutions()) {
+            resultados.add(query.nextSolution());
+        }
+        return resultados;
+    }
+    public boolean verificarTarea(String nombreTarea) {
+        String consulta = "tarea(" + nombreTarea + ", _, _, _, _).";
+        Query query = new Query(consulta);
+        return query.hasSolution();
     }
 }

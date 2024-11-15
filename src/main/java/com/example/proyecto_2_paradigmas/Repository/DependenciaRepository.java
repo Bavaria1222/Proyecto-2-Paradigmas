@@ -11,6 +11,5 @@ import java.util.List;
 @Repository
 public interface DependenciaRepository extends JpaRepository<Dependencia, Long> {
 
-    List<Dependencia> findByTareaAndTipoDependencia(Tarea tarea, TipoDependencia tipoDependencia);
 
 }

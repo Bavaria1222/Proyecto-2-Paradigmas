@@ -28,7 +28,6 @@ public class TareaController {
         tarea.setNombre(tareaDTO.getNombre());
         tarea.setPrioridad(tareaDTO.getPrioridad());
         tarea.setTiempoEstimado(tareaDTO.getTiempoEstimado());
-        tarea.setRequisitos(tareaDTO.getRequisitos());
         tarea.setEstado(tareaDTO.getEstado());
         tarea.setHoraInicio(tareaDTO.getHoraInicio());
         tarea.setFechaLimite(tareaDTO.getFechaLimite());

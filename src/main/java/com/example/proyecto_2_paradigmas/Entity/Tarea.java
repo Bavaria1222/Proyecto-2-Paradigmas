@@ -2,7 +2,7 @@ package com.example.proyecto_2_paradigmas.Entity;
 
 import com.example.proyecto_2_paradigmas.Enum.Estado;
 import com.example.proyecto_2_paradigmas.Enum.Prioridad;
-import com.example.proyecto_2_paradigmas.Enum.TipoDependencia;
+import com.example.proyecto_2_paradigmas.Enum.RestriccionClima;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -29,14 +29,15 @@ public class Tarea {
     private String nombre;
 
     @Enumerated(EnumType.STRING)
-    private Prioridad prioridad;
+    private Prioridad prioridad = Prioridad.BAJA; // Valor predeterminado
 
     private int tiempoEstimado;
 
-    private String requisitos;
+    @Enumerated(EnumType.STRING)
+    private RestriccionClima restriccionClima = RestriccionClima.NO_APLICA; // Valor predeterminado
 
     @Enumerated(EnumType.STRING)
-    private Estado estado;
+    private Estado estado = Estado.PENDIENTE;
 
     private LocalDateTime horaInicio;
 
@@ -52,13 +53,11 @@ public class Tarea {
     @JsonManagedReference
     private List<Dependencia> dependencias = new ArrayList<>();
 
-    // Constructor y métodos
-
-    public void agregarDependencia(Long idTareaDependiente, TipoDependencia tipo) {
+    // Método para agregar una dependencia de otra tarea
+    public void agregarDependencia(Long idTareaDependiente) {
         Dependencia dependencia = new Dependencia();
         dependencia.setTarea(this);
-        dependencia.setId(idTareaDependiente); // Solo almacenamos el ID
-        dependencia.setTipoDependencia(tipo);
+        dependencia.setIdTareaDependiente(idTareaDependiente);
         dependencias.add(dependencia);
     }
 }
