@@ -11442,3 +11442,25 @@ org.hibernate.PropertyValueException: not-null property references a null or tra
 2024-11-15T02:34:17.490-06:00  INFO 25748 --- [Proyecto 2 Paradigmas] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-11-15T02:34:17.493-06:00  INFO 25748 --- [Proyecto 2 Paradigmas] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2024-11-15T02:34:18.658-06:00  INFO 25748 --- [Proyecto 2 Paradigmas] [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 856 ms
+2024-11-15T12:47:23.184-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] c.e.p.Proyecto2ParadigmasApplication     : Starting Proyecto2ParadigmasApplication using Java 21.0.2 with PID 27776 (D:\UNA\Administración de BD\Proyecto Repositorio\Backend\Proyecto 2 Paradigmas\Proyecto-2-Paradigmas\Backend\target\classes started by CAR in D:\UNA\Administración de BD\Proyecto Repositorio\Backend\Proyecto 2 Paradigmas\Proyecto-2-Paradigmas\Backend)
+2024-11-15T12:47:23.185-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] c.e.p.Proyecto2ParadigmasApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-11-15T12:47:23.975-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15T12:47:24.034-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2024-11-15T12:47:24.453-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-15T12:47:24.466-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-15T12:47:24.466-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-15T12:47:24.517-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-15T12:47:24.517-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1297 ms
+2024-11-15T12:47:24.662-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15T12:47:24.739-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-15T12:47:24.775-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-15T12:47:25.098-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15T12:47:25.129-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-15T12:47:25.504-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c0013b8
+2024-11-15T12:47:25.506-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-15T12:47:25.549-06:00  WARN 27776 --- [Proyecto 2 Paradigmas] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-15T12:47:26.403-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15T12:47:26.776-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T12:47:27.174-06:00  WARN 27776 --- [Proyecto 2 Paradigmas] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15T12:47:27.552-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-15T12:47:27.559-06:00  INFO 27776 --- [Proyecto 2 Paradigmas] [main] c.e.p.Proyecto2ParadigmasApplication     : Started Proyecto2ParadigmasApplication in 4.74 seconds (process running for 5.366)
