@@ -9,7 +9,7 @@ interface HelmetProps {
 export const Helmet: FC<HelmetProps> = (props) => {
   const { heading } = props;
 
-  const pageTitle = heading ? heading + ' - UIGYM' : ' UI GYM ';
+  const pageTitle = heading ? heading  : ' UI GYM ';
 
   return (
     <Head>

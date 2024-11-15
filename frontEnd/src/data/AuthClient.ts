@@ -80,10 +80,24 @@ export class AuthClient extends CandyClient {
       return this.patch(`/actualizarEmpleado/${id}`, updateUserDTO);
     }*/
 
-    //clima
+    //Clima
     async getClima() {
       return this.get(`/clima`);
     }
+  
+    async deleteClima(id: string) {
+      return this.delete(`/clima/${id}`);
+    }
+
+    async postClima(clima) {
+      return this.post(`/clima`, clima);
+    }
+
+    //DiaSemana
+    async getDiaSemana() {
+      return this.get(`/diasemana`);
+    }
+
     //Tarea
     async getTarea() {
       return this.get(`/tarea`);

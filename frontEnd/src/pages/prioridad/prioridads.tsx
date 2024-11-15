@@ -14,7 +14,7 @@ const PrioridadLista = () => {
     const navigate = useNavigate();
 
     const breadcrumbs = [
-        { label: "Empleados", bold: true }
+        { label: "Prioridad", bold: true }
     ];
 
     const headers = [

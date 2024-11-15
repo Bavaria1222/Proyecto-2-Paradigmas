@@ -9,4 +9,7 @@ export const routes = {
   tarea: '/tarea',
   tareas: '/tareas',
 
+  clima: '/clima',
+  climas: '/climas',
+
 };

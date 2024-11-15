@@ -53,7 +53,7 @@ export const useMenuItems = (): MenuItem[] => {
                 <BoltIcon />
               </Box>
             ),
-            route: routes.dummy,
+            route: routes.climas,
           },
           {
             title: 'Actividad',
