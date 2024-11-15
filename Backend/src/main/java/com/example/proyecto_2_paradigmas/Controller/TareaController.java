@@ -29,25 +29,23 @@ public class TareaController {
      */
     @PostMapping
     public ResponseEntity<Tarea> crearTarea(@RequestBody TareaDTO tareaDTO) {
-        // Convertir TareaDTO a Tarea
-        Optional<Prioridad> prioridadOpt = prioridadService.obtenerPorId(tareaDTO.getPrioridad().getId());
-        if (prioridadOpt.isEmpty()) {
-            return ResponseEntity.badRequest().build();
-        }
-
         Tarea tarea = new Tarea();
         tarea.setNombre(tareaDTO.getNombre());
-        tarea.setPrioridad(prioridadOpt.get());
         tarea.setTiempoEstimado(tareaDTO.getTiempoEstimado());
         tarea.setRestriccionClima(tareaDTO.getRestriccionClima());
         tarea.setEstado(tareaDTO.getEstado());
         tarea.setHoraInicio(tareaDTO.getHoraInicio());
         tarea.setFechaLimite(tareaDTO.getFechaLimite());
 
-        // Guardar la tarea usando el servicio
+        // Buscar y asignar prioridad por defecto si no existe una
+        Optional<Prioridad> prioridadPorDefecto = prioridadService.obtenerPrioridadPorDescripcion("BAJA");
+        prioridadPorDefecto.ifPresent(tarea::setPrioridad);
+
         Tarea tareaGuardada = tareaService.guardarTarea(tarea);
         return ResponseEntity.ok(tareaGuardada);
     }
+
+
 
     /**
      * Endpoint para agregar dependencias a una tarea existente.
@@ -88,5 +86,20 @@ public class TareaController {
     public ResponseEntity<Void> eliminarTarea(@PathVariable Long id) {
         tareaService.eliminarTarea(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/{id}/prioridad/{prioridadId}")
+    public ResponseEntity<Tarea> asignarPrioridad(@PathVariable Long id, @PathVariable Long prioridadId) {
+        Optional<Tarea> tareaOpt = tareaService.obtenerPorId(id);
+        Optional<Prioridad> prioridadOpt = prioridadService.obtenerPorId(prioridadId);
+
+        if (tareaOpt.isEmpty() || prioridadOpt.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        Tarea tarea = tareaOpt.get();
+        tarea.setPrioridad(prioridadOpt.get());
+        Tarea tareaActualizada = tareaService.guardarTarea(tarea);
+        return ResponseEntity.ok(tareaActualizada);
     }
 }

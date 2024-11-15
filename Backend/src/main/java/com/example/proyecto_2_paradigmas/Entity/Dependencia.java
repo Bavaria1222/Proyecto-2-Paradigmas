@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Dependencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
     @ManyToOne

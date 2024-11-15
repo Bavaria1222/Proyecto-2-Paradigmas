@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Data
 public class TareaDTO {
     private String nombre;
-    private PrioridadDTO prioridad;
     private int tiempoEstimado;
     private RestriccionClima restriccionClima;
     private Estado estado;

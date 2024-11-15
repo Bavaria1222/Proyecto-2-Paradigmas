@@ -27,9 +27,7 @@ public class Tarea {
 
     private String nombre;
 
-    @ManyToOne
-    @JoinColumn(name = "prioridad_id", nullable = false)
-    private Prioridad prioridad;
+
 
     private int tiempoEstimado;
 
@@ -42,6 +40,12 @@ public class Tarea {
     private LocalDateTime horaInicio;
 
     private LocalDateTime fechaLimite;
+
+
+    @ManyToOne
+    @JoinColumn(name = "prioridad_id", nullable = true)
+    private Prioridad prioridad;
+
 
     @Setter
     @ManyToOne

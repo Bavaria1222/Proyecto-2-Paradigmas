@@ -33,5 +33,9 @@ public class PrioridadService {
     public Prioridad guardarPrioridad(Prioridad prioridad) {
         return prioridadRepository.save(prioridad);
     }
+    public Optional<Prioridad> obtenerPrioridadPorDescripcion(String descripcion) {
+        return prioridadRepository.findByDescripcion(descripcion);
+    }
+
 
 }
