@@ -2,12 +2,10 @@ import ArchiveIcon from '@heroicons/react/24/outline/ArchiveBoxIcon';
 import BoltIcon from '@heroicons/react/24/outline/BoltIcon';
 import BookOpenIcon from '@heroicons/react/24/outline/BookOpenIcon';
 import ClipboardDocumentCheckIcon from '@heroicons/react/24/outline/ClipboardDocumentCheckIcon';
-import JournalIcon from '@heroicons/react/24/outline/ClipboardDocumentIcon';
+import ClipboardDocumentIcon from '@heroicons/react/24/outline/ClipboardDocumentIcon';
 import CogIcon from '@heroicons/react/24/outline/CogIcon';
-import DocumentIcon from '@heroicons/react/24/outline/DocumentMagnifyingGlassIcon';
-import ReportIcon from '@heroicons/react/24/outline/FlagIcon';
+import FlagIcon from '@heroicons/react/24/outline/FlagIcon';
 import HomeIcon from '@heroicons/react/24/outline/HomeIcon';
-import UserIcon from '@heroicons/react/24/outline/UserIcon';
 import { Box } from '@mui/material';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -40,7 +38,7 @@ export const useMenuItems = (): MenuItem[] => {
                 width={24}
                 height={24}
               >
-                <UserIcon />
+                <ClipboardDocumentIcon />
               </Box>
             ),
             route: routes.gimnasios,
@@ -52,7 +50,7 @@ export const useMenuItems = (): MenuItem[] => {
                 width={24}
                 height={24}
               >
-                <UserIcon />
+                <BoltIcon />
               </Box>
             ),
             route: routes.dummy,
@@ -64,7 +62,7 @@ export const useMenuItems = (): MenuItem[] => {
                 width={24}
                 height={24}
               >
-                <UserIcon />
+                <BookOpenIcon />
               </Box>
             ),
             route: routes.empleados,
@@ -76,12 +74,23 @@ export const useMenuItems = (): MenuItem[] => {
                 width={24}
                 height={24}
               >
-                <ClipboardDocumentCheckIcon />
+                <FlagIcon />
               </Box>
             ),
             route: routes.membresias,
           },
-
+          {
+            title: 'Plan Optimizado',
+            icon: (
+              <Box
+                width={24}
+                height={24}
+              >
+                <CogIcon />
+              </Box>
+            ),
+            route: routes.membresias,
+          },
         ],
       },
     ];

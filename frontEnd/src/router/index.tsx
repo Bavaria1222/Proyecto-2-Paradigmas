@@ -3,9 +3,9 @@ import type { RouteObject } from 'react-router';
 import { Navigate, Outlet } from 'react-router-dom';
 import { Layout } from 'src/layouts';
 
-import Empleado from 'src/pages/empleados/empleado';
-import EmpleadosLista from 'src/pages/empleados/empleados';
-import GimnasiosLista from 'src/pages/gimnasio/gimnasios';
+import Empleado from 'src/pages/tarea/empleado';
+import EmpleadosLista from 'src/pages/tarea/empleados';
+import GimnasiosLista from 'src/pages/clima/gimnasios';
 // import { Layout as LayoutBase } from "src/layouts/base";
 import { routes } from './routes';
 
