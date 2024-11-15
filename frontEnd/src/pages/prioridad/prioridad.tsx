@@ -8,7 +8,7 @@ import { PostPrioridad } from 'src/domain/prioridad/PostPrioridad';
 import PatchPrioridad from 'src/domain/prioridad/PatchPrioridad';
 
 
-const Empleado = () => {
+const Prioridad = () => {
     const params = useParams();
     const location = useLocation();
     const navigate = useNavigate();
@@ -137,4 +137,4 @@ const Empleado = () => {
     );
 };
 
-export default Empleado;
+export default Prioridad;
