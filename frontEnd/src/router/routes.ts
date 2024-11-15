@@ -6,5 +6,7 @@ export const routes = {
   prioridads: '/prioridads',
   prioridad: '/prioridad',
 
+  tarea: '/tarea',
+  tareas: '/tareas',
 
 };

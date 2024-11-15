@@ -41,7 +41,7 @@ export const useMenuItems = (): MenuItem[] => {
                 <ClipboardDocumentIcon />
               </Box>
             ),
-            route: routes.dummy,
+            route: routes.tareas,
           },
           {
             title: 'Clima',

@@ -4,8 +4,9 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { Layout } from 'src/layouts';
 
 import Prioridad from 'src/pages/prioridad/prioridad';
+
 import PrioridadLista from 'src/pages/prioridad/prioridads';
-import GimnasiosLista from 'src/pages/clima/gimnasios';
+import TareaLista from 'src/pages/tarea/tareas';
 // import { Layout as LayoutBase } from "src/layouts/base";
 import { routes } from './routes';
 
@@ -44,6 +45,9 @@ export const routesOutlets: RouteObject[] = [
       { path: 'prioridads', element: <PrioridadLista /> },
       { path: 'prioridad', element: <Prioridad /> },
       { path: 'prioridad/:id', element: <Prioridad /> },
+      { path: 'tarea', element: <Prioridad /> },
+      { path: 'tareas', element: <TareaLista /> },
+
 
     ],
   },

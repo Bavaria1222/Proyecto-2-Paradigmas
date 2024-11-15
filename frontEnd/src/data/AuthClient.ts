@@ -55,7 +55,7 @@ export class AuthClient extends CandyClient {
     }
   }
 
-  //Empleados
+  //Prioridad
   async getPrioridad() {
     return this.get(`/prioridad`);
   }
@@ -79,4 +79,14 @@ export class AuthClient extends CandyClient {
     async patchEmpleado(id: string, updateUserDTO) {
       return this.patch(`/actualizarEmpleado/${id}`, updateUserDTO);
     }*/
+
+    //clima
+    async getClima() {
+      return this.get(`/clima`);
+    }
+    //Tarea
+    async getTarea() {
+      return this.get(`/tarea`);
+    }
+
 }
