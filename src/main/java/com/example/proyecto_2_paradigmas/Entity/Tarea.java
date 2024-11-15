@@ -1,7 +1,6 @@
 package com.example.proyecto_2_paradigmas.Entity;
 
 import com.example.proyecto_2_paradigmas.Enum.Estado;
-import com.example.proyecto_2_paradigmas.Enum.Prioridad;
 import com.example.proyecto_2_paradigmas.Enum.RestriccionClima;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -28,13 +27,14 @@ public class Tarea {
 
     private String nombre;
 
-    @Enumerated(EnumType.STRING)
-    private Prioridad prioridad = Prioridad.BAJA; // Valor predeterminado
+    @ManyToOne
+    @JoinColumn(name = "prioridad_id", nullable = false)
+    private Prioridad prioridad;
 
     private int tiempoEstimado;
 
     @Enumerated(EnumType.STRING)
-    private RestriccionClima restriccionClima = RestriccionClima.NO_APLICA; // Valor predeterminado
+    private RestriccionClima restriccionClima = RestriccionClima.NO_APLICA;
 
     @Enumerated(EnumType.STRING)
     private Estado estado = Estado.PENDIENTE;
@@ -53,7 +53,6 @@ public class Tarea {
     @JsonManagedReference
     private List<Dependencia> dependencias = new ArrayList<>();
 
-    // Método para agregar una dependencia de otra tarea
     public void agregarDependencia(Long idTareaDependiente) {
         Dependencia dependencia = new Dependencia();
         dependencia.setTarea(this);

@@ -2,7 +2,10 @@ package com.example.proyecto_2_paradigmas.Controller;
 
 import com.example.proyecto_2_paradigmas.DTO.DependenciaDTO;
 import com.example.proyecto_2_paradigmas.DTO.TareaDTO;
+import com.example.proyecto_2_paradigmas.DTO.PrioridadDTO;
+import com.example.proyecto_2_paradigmas.Entity.Prioridad;
 import com.example.proyecto_2_paradigmas.Entity.Tarea;
+import com.example.proyecto_2_paradigmas.Service.PrioridadService;
 import com.example.proyecto_2_paradigmas.Service.TareaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,16 +21,25 @@ public class TareaController {
     @Autowired
     private TareaService tareaService;
 
+    @Autowired
+    private PrioridadService prioridadService;
+
     /**
      * Endpoint para crear una nueva tarea sin dependencias.
      */
     @PostMapping
     public ResponseEntity<Tarea> crearTarea(@RequestBody TareaDTO tareaDTO) {
         // Convertir TareaDTO a Tarea
+        Optional<Prioridad> prioridadOpt = prioridadService.obtenerPorId(tareaDTO.getPrioridad().getId());
+        if (prioridadOpt.isEmpty()) {
+            return ResponseEntity.badRequest().build();
+        }
+
         Tarea tarea = new Tarea();
         tarea.setNombre(tareaDTO.getNombre());
-        tarea.setPrioridad(tareaDTO.getPrioridad());
+        tarea.setPrioridad(prioridadOpt.get());
         tarea.setTiempoEstimado(tareaDTO.getTiempoEstimado());
+        tarea.setRestriccionClima(tareaDTO.getRestriccionClima());
         tarea.setEstado(tareaDTO.getEstado());
         tarea.setHoraInicio(tareaDTO.getHoraInicio());
         tarea.setFechaLimite(tareaDTO.getFechaLimite());
