@@ -24,30 +24,19 @@ const Page: FC = () => {
         >
           <Grid item
             xs={12}>
-            <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <img src={logoImage}
-                style={{ width: '100%', maxWidth: '300px', height: 'auto', marginBottom: '16px' }} />
 
-            </Box>
           </Grid>
           <Grid item
             xs={12}>
             <Typography variant="h3"
               component="div"
               sx={{ fontWeight: 'bold', mt: 1, fontSize: { xs: '1.5rem', md: '2.125rem' } }}>
-              Te damos la bienvenida a la administración del Gym.
+              Te damos la bienvenida al proyecto de Paradigmas
             </Typography>
           </Grid>
         </Grid>
       </Container>
-      <Box
-        sx={{ textAlign: 'center', py: 1 }}
-      >
-        <Typography variant="body2"
-          sx={{ fontSize: { xs: '0.75rem', md: '0.875rem' }, m: 0 }}>
-          Todos los derechos reservados
-        </Typography>
-      </Box>
+
     </Box>
   );
 };

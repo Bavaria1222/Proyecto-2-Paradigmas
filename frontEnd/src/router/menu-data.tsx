@@ -34,7 +34,7 @@ export const useMenuItems = (): MenuItem[] => {
             route: routes.index,
           },
           {
-            title: 'Gimnasios',
+            title: 'Tarea',
             icon: (
               <Box
                 width={24}
@@ -46,7 +46,7 @@ export const useMenuItems = (): MenuItem[] => {
             route: routes.gimnasios,
           },
           {
-            title: 'Clientes',
+            title: 'Clima',
             icon: (
               <Box
                 width={24}
@@ -58,7 +58,7 @@ export const useMenuItems = (): MenuItem[] => {
             route: routes.dummy,
           },
           {
-            title: 'Empleados',
+            title: 'Actividad',
             icon: (
               <Box
                 width={24}
@@ -70,7 +70,7 @@ export const useMenuItems = (): MenuItem[] => {
             route: routes.empleados,
           },
           {
-            title: 'Membresías',
+            title: 'Prioridad',
             icon: (
               <Box
                 width={24}
@@ -81,63 +81,7 @@ export const useMenuItems = (): MenuItem[] => {
             ),
             route: routes.membresias,
           },
-          {
-            title: 'Rutina',
-            icon: (
-              <Box
-                width={24}
-                height={24}
-              >
-                <BoltIcon />
-              </Box>
-            ),
-            route: routes.dummy,
-          },
-          {
-            title: 'Máquinas',
-            icon: (
-              <Box
-                width={24}
-                height={24}
-              >
-                <CogIcon />
-              </Box>
-            ),
-            route: routes.maquinas,
-          },
-          {
-            title: 'Bitácora',
-            icon: (
-              <Box
-                width={24}
-                height={24}
-              >
-                <JournalIcon />
-              </Box>
-            ),
-            route: routes.bitacoras,
-          },
-          {
-            title: 'Cursos',
-            icon: (
-              <Box
-                width={24}
-                height={24}
-              >
-                <BookOpenIcon />
-              </Box>
-            ),
-            subMenu: [
-              {
-                title: 'Listado de Cursos',
-                route: routes.cursos,
-              },
-              {
-                title: 'Historial de Cursos',
-                route: routes.historialCursos,
-              },
-            ],
-          },
+
         ],
       },
     ];

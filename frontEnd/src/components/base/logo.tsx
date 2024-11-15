@@ -51,16 +51,6 @@ export const Logo = ({ dark = false, isLinkStatic = false }: LogoProps) => {
           },
         }}
       >
-        <Box
-          sx={{
-            width: { xs: '50%', sm: '60%', md: '70%', lg: '80%', xl: '90%' },
-            height: 'auto',
-          }}
-        >
-          <img src={logoImage}
-            style={{ width: '40%', height: '40%' }}
-            alt="Logo" />
-        </Box>
       </Link>
     </Box>
   );

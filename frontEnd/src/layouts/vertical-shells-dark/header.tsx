@@ -62,10 +62,7 @@ export const Header: FC<HeaderProps> = (props) => {
   const userData = JSON.parse(localStorage.getItem('userData') || '{}');
   const fullName = `${userData.nombre} ${userData.apellido1}`;
 
-  const handleLogout = () => {
-    localStorage.removeItem('userData');
-    navigate('/login');
-  };
+
 
   return (
     <HeaderWrapper
@@ -97,22 +94,7 @@ export const Header: FC<HeaderProps> = (props) => {
           spacing={{ xs: 1, sm: 2 }}
         >
           {!lgUp && <Logo isLinkStatic />}
-          <IconButton
-            color="inherit"
-            onClick={dialog.handleOpen}
-            sx={{
-              '&:hover': {
-                background: alpha(theme.palette.secondary.main, 0.04),
-              },
-              borderRadius: 50,
-              '& .MuiSvgIcon-root': {
-                fontSize: 23,
-              },
-              p: 1,
-            }}
-          >
-            <SearchRoundedIcon />
-          </IconButton>
+
         </Stack>
         <Stack
           direction="row"
@@ -131,33 +113,7 @@ export const Header: FC<HeaderProps> = (props) => {
             direction="row"
             alignItems="center"
           >
-            <Box textAlign="right">
-              <Box
-                sx={{
-                  fontSize: { xs: '1rem', sm: '1.25rem' },
-                  fontWeight: 'bold',
-                }}
 
-              >
-                {fullName}
-
-              </Box>
-              <Button
-                variant="text"
-                onClick={handleLogout}
-
-                sx={{
-                  lineHeight: 1.2,
-                  padding: 0,
-                  fontSize: { xs: '14px', sm: '18px' },
-                  textDecoration: 'underline',
-
-                }}
-
-              >
-                Cerrar sesión
-              </Button>
-            </Box>
           </Stack>
 
 
